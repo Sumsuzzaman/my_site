@@ -1,11 +1,63 @@
 {% extends "base.html" %}
+<!-- prettier-ignore -->
+{% load static %}
 
 <!-- prettier-ignore -->
 {% block title %} 
     My Blog 
 {% endblock %}
 
+{% block css_files %}
+<link rel="stylesheet" href="{% static "blog/index.css" %}" />
+{% endblock %}
 <!-- prettier-ignore -->
 {% block content %}
-<h1>Welcome To My Blog</h1>
+<header id="main-navigation">
+  <h1><a href="">Mad's Blog</a></h1>
+  <nav>
+    <a href=""> All Posts</a>
+  </nav>
+</header>
+<section id="welcome">
+  <header>
+    <img src="{% static "blog/images/max.png" %}" alt="Mad's is the author" />
+    <h2>Welcome To My Blog</h2>
+  </header>
+  <p>Hi, I'm Mad and I love to write about tech & tunes!</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thoughts</h2>
+
+  <ul>
+    <li>
+      <article class="post">
+        <a href="">
+          <img src="{% static "blog/images/mountains.jpg" %}" alt="Mountain
+          Hiking" />
+          <div class="post__content">
+            <h3>Mountain Hiking</h3>
+            <p>
+              Mountain hiking offers a chance to immerse yourself in nature's
+              grandeur. Breathe in crisp, fresh air as you ascend, leaving
+              behind the hustle and bustle of everyday life. Witness
+              breathtaking panoramic vistas as you conquer each step, rewarding
+              yourself with stunning natural beauty!
+            </p>
+          </div>
+        </a>
+      </article>
+    </li>
+  </ul>
+</section>
+
+<section id="about">
+  <h2>What I do</h2>
+  <p>
+    I craft web applications with Django, bringing ideas to life with code. But
+    my passion goes beyond the technical. I find fulfillment in using my skills
+    to empower others and create solutions that make a positive impact.
+  </p>
+</section>
+
 {% endblock %}
